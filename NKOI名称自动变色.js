@@ -37,16 +37,9 @@ function changeColor(){
 setInterval("changeColor()", 300);
 
 function blink_init_function() {
-    var blink_name = new Set(['erweiz'])
     var objs = document.getElementsByName("if_blink");
     for (var i = objs.length - 1; i >= 0; i--) {
-        var tmp = objs[i].innerHTML;
-        for (var name of blink_name) {
-            if (tmp.indexOf(name) != -1) {
-                objs[i].setAttribute("name", "blink");
-                break;
-            }
-        }
+        objs[i].setAttribute("name", "blink");
     }
 }
 (document).ready(blink_init_function());
